@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.darktheme {
+  background-color: black;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* animation */
+.animated-box {
+  position: relative;
+  opacity: 0;
+  transform: translate(100px);
+  animation: slideInBottom 1s ease-out forwards;
+}
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* responsive nav */
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: right;
+  font-size: large;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: yellow;
+}
+
+.navbar a.icon {
+  display: none;
+}
+
+/* about section */
+.coin {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  height: 90vh;
+}
+.coin1 {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coin1 p {
+  font-size: 3rem;
+}
+.coin2 {
+  flex: 0cm;
+}
+.coin2 img {
+  justify-content: center;
+  border: 5px;
+  border-radius: 50%;
+
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+
+  position: relative;
+}
+.coin2 img:hover {
+  cursor: none;
+  box-shadow: 0 0 5em 0 yellow;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1050px) {
+  /* about section */
+  .coin {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    height: fit-content;
+  }
+  .coin1 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coin1 p {
+    font-size: 30px;
+  }
+  .coin2 {
+    flex: 1;
+  }
+  .coin2 img {
+    border: 5px;
+    border-radius: 50%;
+
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    align-items: center;
+
+    position: relative;
+  }
+  .coin2 img:hover {
+    cursor: none;
+    box-shadow: 0 0 5em 0 yellow;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: left;
+    display: block;
+  }
+
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  /* about section */
+  .coin {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+  }
+  .coin1 {
+    grid-row: 2;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .coin1 p {
+    font-size: 30px;
+  }
+  .coin2 img {
+    border: 5px;
+    border-radius: 50%;
+
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    align-items: center;
+
+    position: relative;
+  }
+  /* project section */
+  .projects {
+    display: inline-block;
+  }
+
+  .cls {
+    text-align: center;
+  }
+  .cls:hover {
+    cursor: pointer;
+  }
+  .show {
+    color: #000000;
+    float: hide;
+  }
+  .show:hover {
+    color: #000000;
+  }
+
+  .assign {
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    font-size: 20px;
+  }
+  /* contact */
+  .call {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+  }
+  textarea {
+    width: 100px;
+    max-width: 300px;
+    background-color: black;
+    color: white;
+    border: 2px solid yellow;
+    height: 50px;
+  }
+
+  input[type="text"] {
+    color: white;
+    border: 2px solid yellow;
+    max-width: 200px;
+    width: 0px;
+    height: 40px;
+    background-color: black;
+  }
+  input[type="email"] {
+    color: white;
+    border: 2px solid yellow;
+    max-width: 300px;
+    width: 2500px;
+    height: 40px;
+    background-color: black;
+  }
+  input[type="submit"] {
+    height: 30px;
+    width: 100px;
+    background-color: blue;
+  }
+  input[type="submit"]:hover {
+    cursor: pointer;
+    height: 40px;
+    border-radius: 10px;
+    background-color: yellow;
+  }
+}
+
+/* skill section */
+.skills-section {
+  border: 50px;
+
+  border-radius: 10px;
+  padding: 40px 0;
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+}
+
+.skills-list li {
+  background-color: #333;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+}
+.skills-list li:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+/* project section */
+.ptc {
+  /* project title color */
+  text-align: center;
+  color: yellow;
+}
+.projects {
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+.show {
+  float: right;
+}
+.show:hover {
+  cursor: pointer;
+  color: yellow;
+}
+.cls {
+  text-align: center;
+}
+.cls:hover {
+  cursor: pointer;
+  color: yellow;
+}
+.hidden {
+  display: none;
+  text-align: left;
+}
+
+/* contact */
+.call {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+textarea {
+  width: 500px;
+  background-color: black;
+  color: white;
+  border: 2px;
+  height: 50px;
+}
+
+input[type="text"] {
+  color: white;
+  border: 2px;
+  width: 250px;
+  height: 40px;
+  background-color: #000000;
+}
+input[type="email"] {
+  color: white;
+  border: 2px;
+  width: 500px;
+  height: 40px;
+  background-color: black;
+}
+input[type="submit"] {
+  border-radius: 4px;
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  color: black;
+  background-color: yellow;
+}
+
+/* footer  */
+.foot {
+  padding: 20px;
+  border: 2px solid gray;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.foot footer div a i {
+  display: block;
+}

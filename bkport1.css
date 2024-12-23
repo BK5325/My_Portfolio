@@ -1,0 +1,37 @@
+.assign {
+  text-align: center;
+  size: 50px;
+  font-size: 30px;
+}
+.assign > img {
+  height: 300px;
+  width: 300px;
+}
+@media screen and (max-width: 600px) {
+  .assign {
+    text-align: center;
+    font-size: 30px;
+  }
+  .hide {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    visibility: visible;
+  }
+  .cls {
+    height: 20px;
+  }
+}
+strong {
+  color: yellow;
+  letter-spacing: 5px;
+}
+span {
+  padding: 10px;
+  padding-left: 40px;
+  font-size: xx-large;
+}
+
+.foot footer div a i {
+  display: inline;
+}
