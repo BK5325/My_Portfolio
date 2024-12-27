@@ -33,5 +33,5 @@ span {
 }
 
 .foot footer div a i {
-  display: inline;
+  display: inline-block;
 }

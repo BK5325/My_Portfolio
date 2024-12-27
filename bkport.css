@@ -370,6 +370,63 @@ input[type="submit"]:hover {
   color: black;
   background-color: yellow;
 }
+/* Pop Up Notification */
+#popup-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80vw;
+  max-width: 400px;
+  color: #FFFFFF;
+}
+
+#close-popup {
+  border-radius: 4px;
+  height: 30px;
+  width: 100px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+#close-popup:hover {
+  background-color: #333333;
+}
+
+/* Media queries for different screen sizes */
+
+@media only screen and (max-width: 768px) {
+  #popup {
+    width: 90vw;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #popup {
+    width: 95vw;
+    max-width: 250px;
+  }
+}
 
 /* footer  */
 .foot {
@@ -380,5 +437,12 @@ input[type="submit"]:hover {
 }
 
 .foot footer div a i {
-  display: block;
+  display: inline-block;
+}
+.foot div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
 }
